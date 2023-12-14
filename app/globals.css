@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --color-light-1:#ffffff;
+  --color-light-2:#f5f8fa;
+  --color-light-3:rgba(65, 65, 65, 0.404);
+  --color-dark-1: #191919;
+  --color-dark-2: #0E0D35;
+  --color-dark-3: #353535;
+  --color-dark-4: #29272b;
+  --color-dark-5: #222529;
+  --color-dark-6: #3A3A3A;
+  --color-dark-7: #dadada91;
+  --color-green-1: #00A056;
+  --color-red-1:  #D63236;
+  --box-shadow-1: rgba(0, 0, 0, 0.075) 0px 1px 3px,
+    rgba(0, 0, 0, 0.137) 0px 1px 2px;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--light-1);
+  direction: rtl;
+  color: var(--color-dark-4);
+  position: relative;
+}
+
+.mainContainer {
+  max-width: 130rem;
+  margin: auto;
+}
+
+.mainStructure{
+  min-height: 92dvh;
+  margin-top: 8dvh;
+  display: grid;
+  grid-template-rows:auto 1fr;
+  position: relative;
+}
+
+@media (max-width: 60rem) {
+  html {
+    font-size: 50%;
+  }
 }
