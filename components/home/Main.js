@@ -157,26 +157,6 @@ const Main = () => {
                                         <li>450</li>
                                         <li>20 ج.م</li>
                                     </ul>
-                                    <ul>
-                                        <li>06:30 PM</li>
-                                        <li>450</li>
-                                        <li>20 ج.م</li>
-                                    </ul>
-                                    <ul>
-                                        <li>06:30 PM</li>
-                                        <li>450</li>
-                                        <li>20 ج.م</li>
-                                    </ul>{" "}
-                                    <ul>
-                                        <li>06:30 PM</li>
-                                        <li>450</li>
-                                        <li>20 ج.م</li>
-                                    </ul>{" "}
-                                    <ul>
-                                        <li>06:30 PM</li>
-                                        <li>450</li>
-                                        <li>20 ج.م</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
