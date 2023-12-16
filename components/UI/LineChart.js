@@ -12,7 +12,6 @@ import {
     Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import faker from "faker";
 
 ChartJS.register(
     CategoryScale,
@@ -39,30 +38,89 @@ export const LineChart = (props) => {
         },
         scales: {
             x: {
+                display: false, // Hide x-axis labels
                 grid: {
                     display: false,
                 },
             },
             y: {
+                display: false, // Hide y-axis labels
                 grid: {
                     display: false,
                 },
             },
         },
+        elements: {
+            point: {
+                backgroundColor: "#ffffff00",
+                borderWidth: 0,
+            },
+            line: {
+                borderColor: "#00A056",
+                borderWidth: 2,
+                tension: 0.3,
+            },
+        },
     };
-    const labels = ["1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10"];
+    const labels = [
+        "1/10",
+        "2/10",
+        "3/10",
+        "4/10",
+        "5/10",
+        "6/10",
+        "7/10",
+        "1/10",
+        "2/10",
+        "3/10",
+        "4/10",
+        "5/10",
+        "6/10",
+        "7/10",
+        "1/10",
+        "2/10",
+        "3/10",
+        "4/10",
+        "5/10",
+        "6/10",
+        "7/10",
+        "1/10",
+        "2/10",
+        "3/10",
+        "4/10",
+        "5/10",
+        "6/10",
+        "7/10",
+    ];
     const data = {
         labels,
         datasets: [
             {
-                fill: true,
-                label: "بيع",
-                data: labels.map(() =>
-                    faker.datatype.number({ min: 0, max: 50 })
-                ),
-                borderColor: "#D63236",
-                backgroundColor: "#D6323660",
-                lineTension: 0.2,
+                fill: false,
+                label: "الزيارات",
+                data: [
+                    100, 200, 222, 300, 400, 500, 545, 545, 401, 410, 452, 500, 568, 600, 622, 645, 730,
+                    725, 620, 630, 540, 430, 341, 341, 345, 230, 235, 125,
+                ],
+            },
+
+            {
+                label: "المبيعات",
+                data: [
+                    20, 20, 25, 100, 80, 90, 70, 78, 70, 68, 60, 55, 50, 90, 95, 99,
+                    95, 80, 70, 60, 45, 30, 35, 25, 30, 25, 20, 20,
+                ],
+                borderColor: "#FF005E",
+                fill: false,
+            },
+            {
+                label: "النسبه",
+                data: [
+                    5, 8, 9, 8, 2, 2, 4, 3, 5, 2, 3, 4, 7, 8, 8, 9,
+                    5, 8, 1, 1, 4, 3, 5, 5, 3, 4, 1, 2,
+                ],
+                borderColor: "#3A3A3A",
+                fill: false,
             },
         ],
     };

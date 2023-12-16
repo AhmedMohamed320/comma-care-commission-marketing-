@@ -13,13 +13,14 @@
   --color-light-2:#f5f8fa;
   --color-light-3:rgba(65, 65, 65, 0.404);
   --color-dark-1: #191919;
-  --color-dark-2: #0E0D35;
+  --color-dark-2: #202020a9;
   --color-dark-3: #353535;
   --color-dark-4: #29272b;
   --color-dark-5: #222529;
   --color-dark-6: #3A3A3A;
   --color-dark-7: #dadada91;
   --color-green-1: #00A056;
+  --color-green-2: #daeee3;
   --color-red-1:  #D63236;
   --box-shadow-1: rgba(0, 0, 0, 0.075) 0px 1px 3px,
     rgba(0, 0, 0, 0.137) 0px 1px 2px;
@@ -30,9 +31,9 @@ html {
 }
 
 body {
-  background-color: var(--light-1);
+  /* background-color: var(--color-green-2); */
   direction: rtl;
-  color: var(--color-dark-4);
+  color: var(--color-dark-3);
   position: relative;
 }
 
@@ -47,6 +48,19 @@ body {
   display: grid;
   grid-template-rows:auto 1fr;
   position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-green-1);
+  border-radius: 10px;
 }
 
 @media (max-width: 60rem) {
